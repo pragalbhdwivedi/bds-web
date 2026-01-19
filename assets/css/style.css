@@ -131,11 +131,11 @@ nav {
   border: 0;
 }
 
-.menu>li {
+.menu > li {
   position: relative;
 }
 
-.menu>li>a {
+.menu > li > a {
   padding: 6px 10px;
   display: inline-flex;
   align-items: center;
@@ -145,13 +145,13 @@ nav {
   transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
 }
 
-.menu>li>a:hover,
-.menu>li>a:focus {
+.menu > li > a:hover,
+.menu > li > a:focus {
   background: var(--surface-alt);
   text-decoration: none;
 }
 
-.menu>li>a:focus-visible,
+.menu > li > a:focus-visible,
 .submenu a:focus-visible,
 .button:focus-visible,
 .socials a:focus-visible {
@@ -159,8 +159,8 @@ nav {
   outline-offset: 2px;
 }
 
-.menu>li>a.active,
-.menu>li>a.active-parent {
+.menu > li > a.active,
+.menu > li > a.active-parent {
   background: rgba(29, 77, 143, 0.12);
   color: var(--primary);
 }
@@ -179,7 +179,7 @@ nav {
   z-index: 20;
 }
 
-.menu>li:nth-last-child(-n + 2) .submenu {
+.menu > li:nth-last-child(-n + 2) .submenu {
   left: auto;
   right: 0;
 }
@@ -448,14 +448,12 @@ footer a {
 }
 
 main {
-  opacity: 0;
-  transform: translateY(8px);
+  opacity: 1;
+  transform: none;
 }
 
 body.page-ready main {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  animation: pageFadeIn 0.3s ease;
 }
 
 body.page-exit main {
@@ -479,6 +477,17 @@ body.page-exit main {
 body.loading #loading-bar {
   width: 100%;
   opacity: 1;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 768px) {
@@ -518,11 +527,11 @@ body.loading #loading-bar {
     padding: 6px 0 6px 16px;
   }
 
-  .menu li.submenu-open>.submenu {
+  .menu li.submenu-open > .submenu {
     display: block;
   }
 
-  .menu>li>a {
+  .menu > li > a {
     width: 100%;
   }
 }
