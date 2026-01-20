@@ -116,6 +116,43 @@ const parseIcsEvents = (text) => {
   });
 };
 
+const assertValid = (condition, message) => {
+  if (!condition) {
+    throw new Error(`Invalid festivals.json: ${message}`);
+  }
+};
+
+const validateRulesData = (data) => {
+  assertValid(data && typeof data === 'object', 'root object is missing.');
+  assertValid(data.window && typeof data.window === 'object', '`window` is missing.');
+  assertValid(
+    Number.isInteger(data.window.daysBefore) && Number.isInteger(data.window.daysAfter),
+    '`window.daysBefore` and `window.daysAfter` must be integers.',
+  );
+  assertValid(Array.isArray(data.priorityOrder), '`priorityOrder` must be an array.');
+  assertValid(Array.isArray(data.events), '`events` must be an array.');
+  data.events.forEach((event, index) => {
+    assertValid(event.id && event.name, `event at index ${index} must include id and name.`);
+    assertValid(event.importance, `event ${event.id} missing importance.`);
+    assertValid(event.themeId, `event ${event.id} missing themeId.`);
+    assertValid(event.dateRule && event.dateRule.type, `event ${event.id} missing dateRule.`);
+  });
+};
+
+const validateResolvedEvents = (events) => {
+  if (!Array.isArray(events)) {
+    throw new Error('Resolved events must be an array.');
+  }
+  events.forEach((event) => {
+    if (!event.id || !event.name || !event.importance || !event.themeId) {
+      throw new Error(`Resolved event missing fields: ${JSON.stringify(event)}`);
+    }
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(event.startDate) || !/^\d{4}-\d{2}-\d{2}$/.test(event.endDate)) {
+      throw new Error(`Resolved event has invalid dates: ${event.id}`);
+    }
+  });
+};
+
 const buildResolvedEvents = (rules, icsEvents) => {
   const today = startOfDay(new Date());
   const windowEnd = addMonths(today, 18);
@@ -128,7 +165,12 @@ const buildResolvedEvents = (rules, icsEvents) => {
     }
 
     if (dateRule.type === 'calendar') {
-      const matcher = new RegExp(dateRule.calendarMatch, 'i');
+      let matcher;
+      try {
+        matcher = new RegExp(dateRule.calendarMatch, 'i');
+      } catch (error) {
+        throw new Error(`Invalid calendarMatch regex for ${rule.id}.`);
+      }
       const matches = icsEvents
         .filter((event) => matcher.test(event.summary ?? ''))
         .filter((event) => event.startDate >= today && event.startDate <= windowEnd)
@@ -179,6 +221,7 @@ const main = async () => {
 
   const rawRules = await readFile(festivalsPath, 'utf8');
   const rulesData = JSON.parse(rawRules);
+  validateRulesData(rulesData);
 
   const response = await fetch(icsUrl);
   if (!response.ok) {
@@ -188,6 +231,7 @@ const main = async () => {
   const icsEvents = parseIcsEvents(icsText);
 
   const resolvedEvents = buildResolvedEvents(rulesData.events || [], icsEvents);
+  validateResolvedEvents(resolvedEvents);
 
   const output = {
     generatedAt: new Date().toISOString(),

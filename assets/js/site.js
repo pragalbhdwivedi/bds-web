@@ -56,6 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     rootElement.setAttribute('data-festival', 'none');
     rootElement.setAttribute('data-festival-level', 'subtle');
+    const badge = document.querySelector('.theme-badge');
+    if (badge) {
+      badge.remove();
+    }
   };
 
   const loadThemePreferences = () => {
