@@ -1,13 +1,168 @@
 :root {
   color-scheme: light;
-  --primary: #1d4d8f;
-  --secondary: #f4b400;
-  --text: #1f2933;
+  --bg: #f9fafb;
+  --fg: #1f2933;
   --muted: #6b7280;
-  --surface: #ffffff;
-  --surface-alt: #f5f7fb;
+  --card: #ffffff;
   --border: #e5e7eb;
+  --primary: #1d4d8f;
+  --primary-contrast: #ffffff;
+  --link: #1d4d8f;
+  --secondary: #f4b400;
   --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  --festival-bg: transparent;
+}
+
+html[data-mode="day"] {
+  color-scheme: light;
+  --bg: #f9fafb;
+  --fg: #1f2933;
+  --muted: #6b7280;
+  --card: #ffffff;
+  --border: #e5e7eb;
+  --primary: #1d4d8f;
+  --primary-contrast: #ffffff;
+  --link: #1d4d8f;
+  --secondary: #f4b400;
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+html[data-mode="night"] {
+  color-scheme: dark;
+  --bg: #0b1220;
+  --fg: #e5e7eb;
+  --muted: #9ca3af;
+  --card: #111827;
+  --border: #1f2937;
+  --primary: #60a5fa;
+  --primary-contrast: #0b1220;
+  --link: #93c5fd;
+  --secondary: #f59e0b;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+html[data-festival-level="subtle"] {
+  --festival-bg: transparent;
+}
+
+html[data-festival-level="full"] {
+  --festival-bg: radial-gradient(circle at top, rgba(255, 255, 255, 0.12), transparent 45%);
+}
+
+html[data-festival="none"] {
+  --festival-bg: transparent;
+}
+
+html[data-festival="diwali"] {
+  --primary: #b45309;
+  --link: #b45309;
+  --border: rgba(180, 83, 9, 0.35);
+  --festival-bg: radial-gradient(circle at top, rgba(250, 204, 21, 0.12), transparent 45%);
+}
+
+html[data-festival="holi"] {
+  --primary: #7c3aed;
+  --link: #7c3aed;
+  --border: rgba(124, 58, 237, 0.35);
+  --festival-bg: radial-gradient(circle at top, rgba(236, 72, 153, 0.12), transparent 45%);
+}
+
+html[data-festival="navratri"] {
+  --primary: #dc2626;
+  --link: #dc2626;
+  --border: rgba(220, 38, 38, 0.35);
+  --festival-bg: radial-gradient(circle at top, rgba(244, 63, 94, 0.12), transparent 45%);
+}
+
+html[data-festival="dussehra"] {
+  --primary: #ea580c;
+  --link: #ea580c;
+  --border: rgba(234, 88, 12, 0.35);
+  --festival-bg: radial-gradient(circle at top, rgba(251, 146, 60, 0.12), transparent 45%);
+}
+
+html[data-festival="janmashtami"] {
+  --primary: #2563eb;
+  --link: #2563eb;
+  --border: rgba(37, 99, 235, 0.35);
+  --festival-bg: radial-gradient(circle at top, rgba(59, 130, 246, 0.12), transparent 45%);
+}
+
+html[data-festival="ramnavami"] {
+  --primary: #f97316;
+  --link: #f97316;
+  --border: rgba(249, 115, 22, 0.35);
+  --festival-bg: radial-gradient(circle at top, rgba(251, 191, 36, 0.12), transparent 45%);
+}
+
+html[data-festival="ganesh"] {
+  --primary: #16a34a;
+  --link: #16a34a;
+  --border: rgba(22, 163, 74, 0.35);
+  --festival-bg: radial-gradient(circle at top, rgba(74, 222, 128, 0.12), transparent 45%);
+}
+
+html[data-festival="sankranti"] {
+  --primary: #f59e0b;
+  --link: #f59e0b;
+  --border: rgba(245, 158, 11, 0.35);
+  --festival-bg: radial-gradient(circle at top, rgba(253, 230, 138, 0.12), transparent 45%);
+}
+
+html[data-festival="rakhi"] {
+  --primary: #db2777;
+  --link: #db2777;
+  --border: rgba(219, 39, 119, 0.35);
+  --festival-bg: radial-gradient(circle at top, rgba(244, 114, 182, 0.12), transparent 45%);
+}
+
+html[data-festival="shivratri"] {
+  --primary: #475569;
+  --link: #475569;
+  --border: rgba(71, 85, 105, 0.35);
+  --festival-bg: radial-gradient(circle at top, rgba(148, 163, 184, 0.12), transparent 45%);
+}
+
+html[data-festival="eid"] {
+  --primary: #059669;
+  --link: #059669;
+  --border: rgba(5, 150, 105, 0.35);
+  --festival-bg: radial-gradient(circle at top, rgba(52, 211, 153, 0.12), transparent 45%);
+}
+
+html[data-festival="adha"] {
+  --primary: #0d9488;
+  --link: #0d9488;
+  --border: rgba(13, 148, 136, 0.35);
+  --festival-bg: radial-gradient(circle at top, rgba(94, 234, 212, 0.12), transparent 45%);
+}
+
+html[data-festival="christmas"] {
+  --primary: #dc2626;
+  --link: #dc2626;
+  --border: rgba(220, 38, 38, 0.35);
+  --festival-bg: radial-gradient(circle at top, rgba(248, 113, 113, 0.12), transparent 45%);
+}
+
+html[data-festival="easter"] {
+  --primary: #7c3aed;
+  --link: #7c3aed;
+  --border: rgba(124, 58, 237, 0.35);
+  --festival-bg: radial-gradient(circle at top, rgba(196, 181, 253, 0.12), transparent 45%);
+}
+
+html[data-festival="founders"] {
+  --primary: #1d4ed8;
+  --link: #1d4ed8;
+  --border: rgba(29, 78, 216, 0.35);
+  --festival-bg: radial-gradient(circle at top, rgba(147, 197, 253, 0.12), transparent 45%);
+}
+
+html[data-festival="national"] {
+  --primary: #16a34a;
+  --link: #16a34a;
+  --border: rgba(22, 163, 74, 0.35);
+  --festival-bg: radial-gradient(circle at top, rgba(134, 239, 172, 0.12), transparent 45%);
 }
 
 * {
@@ -18,13 +173,14 @@
 
 body {
   font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  color: var(--text);
-  background: #f9fafb;
+  color: var(--fg);
+  background: var(--bg);
   line-height: 1.6;
+  background-image: var(--festival-bg);
 }
 
 a {
-  color: var(--primary);
+  color: var(--link);
   text-decoration: none;
 }
 
@@ -39,7 +195,7 @@ a:hover {
 }
 
 header {
-  background: var(--surface);
+  background: var(--card);
   box-shadow: var(--shadow);
   position: sticky;
   top: 0;
@@ -51,8 +207,8 @@ header {
 }
 
 .top-bar {
-  background: #facc15;
-  color: #1f2933;
+  background: var(--secondary);
+  color: var(--fg);
   font-size: 13px;
   overflow: hidden;
 }
@@ -68,7 +224,7 @@ header {
 }
 
 .top-bar a {
-  color: #1f2933;
+  color: var(--fg);
   text-decoration: none;
 }
 
@@ -77,7 +233,7 @@ header {
 }
 
 .top-bar a:focus-visible {
-  outline: 2px solid #1f2933;
+  outline: 2px solid var(--fg);
   outline-offset: 2px;
 }
 
@@ -99,7 +255,7 @@ header {
 }
 
 .top-bar-social a {
-  background: #ffffff;
+  background: var(--card);
   border-radius: 999px;
   padding: 4px 10px;
   min-height: 28px;
@@ -107,7 +263,7 @@ header {
   align-items: center;
   justify-content: center;
   font-size: 12px;
-  color: #1f2933;
+  color: var(--fg);
   transition: background 0.18s ease, transform 0.18s ease;
 }
 
@@ -171,7 +327,7 @@ nav {
   justify-content: center;
   gap: 5px;
   border: 1px solid var(--border);
-  background: var(--surface);
+  background: var(--card);
   border-radius: 10px;
   padding: 8px;
   cursor: pointer;
@@ -226,7 +382,7 @@ nav {
 
 .menu > li > a.active,
 .menu > li > a.active-parent {
-  background: rgba(29, 77, 143, 0.12);
+  background: color-mix(in srgb, var(--primary) 12%, transparent);
   color: var(--primary);
 }
 
@@ -234,7 +390,7 @@ nav {
   position: absolute;
   top: 100%;
   left: 0;
-  background: var(--surface);
+  background: var(--card);
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 12px 14px;
@@ -257,7 +413,7 @@ nav {
   display: block;
   padding: 8px 10px;
   border-radius: 8px;
-  color: var(--text);
+  color: var(--fg);
   min-height: 44px;
   transition: background 0.18s ease, transform 0.18s ease;
 }
@@ -279,12 +435,16 @@ nav {
 }
 
 .hero {
-  background: linear-gradient(135deg, rgba(29, 77, 143, 0.08), rgba(244, 180, 0, 0.15));
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--primary) 12%, transparent),
+    color-mix(in srgb, var(--secondary) 18%, transparent)
+  );
   padding: 64px 0 48px;
 }
 
 .hero-card {
-  background: var(--surface);
+  background: var(--card);
   border-radius: 20px;
   box-shadow: var(--shadow);
   padding: 40px;
@@ -307,7 +467,7 @@ nav {
 }
 
 .section:nth-of-type(even) {
-  background: var(--surface-alt);
+  background: color-mix(in srgb, var(--card) 95%, var(--bg));
 }
 
 .section h2 {
@@ -326,7 +486,7 @@ nav {
 }
 
 .card {
-  background: var(--surface);
+  background: var(--card);
   border-radius: 16px;
   padding: 20px;
   box-shadow: var(--shadow);
@@ -340,8 +500,8 @@ nav {
 
 .badge {
   display: inline-block;
-  background: rgba(244, 180, 0, 0.2);
-  color: #8a4b0b;
+  background: color-mix(in srgb, var(--secondary) 25%, transparent);
+  color: color-mix(in srgb, var(--secondary) 80%, #3f2a00);
   padding: 4px 12px;
   border-radius: 999px;
   font-size: 12px;
@@ -373,7 +533,7 @@ nav {
   overflow-x: auto;
   border-radius: 12px;
   border: 1px solid var(--border);
-  background: var(--surface);
+  background: var(--card);
 }
 
 table {
@@ -390,7 +550,7 @@ table td {
 }
 
 table th {
-  background: var(--surface-alt);
+  background: color-mix(in srgb, var(--card) 90%, var(--bg));
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -403,7 +563,7 @@ table th {
 }
 
 .callout {
-  background: var(--surface);
+  background: var(--card);
   padding: 18px;
   border-radius: 12px;
   border-left: 4px solid var(--primary);
@@ -419,7 +579,7 @@ table th {
 
 .button {
   background: var(--primary);
-  color: #fff;
+  color: var(--primary-contrast);
   padding: 10px 18px;
   border-radius: 999px;
   font-weight: 600;
@@ -430,7 +590,7 @@ table th {
 }
 
 .button.secondary {
-  background: #fff;
+  background: var(--card);
   color: var(--primary);
   border: 1px solid var(--primary);
 }
@@ -443,7 +603,7 @@ table th {
 }
 
 .image-card {
-  background: var(--surface);
+  background: var(--card);
   border-radius: 16px;
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
@@ -458,15 +618,15 @@ table th {
 }
 
 .notice {
-  background: rgba(29, 77, 143, 0.08);
+  background: color-mix(in srgb, var(--primary) 10%, transparent);
   padding: 16px 20px;
   border-radius: 12px;
   border-left: 4px solid var(--primary);
 }
 
 footer {
-  background: #111827;
-  color: #e5e7eb;
+  background: color-mix(in srgb, var(--card) 10%, #000);
+  color: var(--fg);
   padding: 40px 0 24px;
 }
 
@@ -478,17 +638,17 @@ footer {
 }
 
 footer a {
-  color: #f9fafb;
+  color: var(--fg);
 }
 
 .footer-title {
   font-size: 16px;
   margin-bottom: 10px;
-  color: #f9fafb;
+  color: var(--fg);
 }
 
 .footer-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: color-mix(in srgb, var(--card) 15%, transparent);
   border-radius: 12px;
   padding: 16px;
 }
@@ -500,7 +660,7 @@ footer a {
 }
 
 .socials a {
-  background: rgba(255, 255, 255, 0.08);
+  background: color-mix(in srgb, var(--card) 20%, transparent);
   padding: 6px 12px;
   border-radius: 999px;
   font-size: 13px;
