@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const mobileBreakpoint = 768;
   let lastScrollY = window.scrollY;
-  const modeToggle = document.getElementById('mode-toggle');
   const festivalToggle = document.getElementById('festival-toggle');
   const festivalSwitchText = document.querySelector('.control-switch-text');
 
@@ -44,39 +43,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  const resolveAutoMode = () => {
-    const hour = new Date().getHours();
-    return hour >= 6 && hour < 18 ? 'day' : 'night';
-  };
-
-  const applyModePreference = (value) => {
-    if (value === 'day' || value === 'night') {
-      document.documentElement.setAttribute('data-mode', value);
-      return;
-    }
-    const autoMode = resolveAutoMode();
-    document.documentElement.setAttribute('data-mode', autoMode);
-  };
-
   const applyFestivalPreference = (enabled) => {
     document.documentElement.setAttribute('data-festival', enabled ? 'none' : 'none');
   };
 
   const loadThemePreferences = () => {
-    const savedMode = localStorage.getItem('modePreference') || 'auto';
     const savedFestival = localStorage.getItem('festivalEnabled') || 'true';
     const festivalEnabled = savedFestival !== 'false';
-
-    if (modeToggle) {
-      modeToggle.value = savedMode;
-    }
 
     if (festivalToggle) {
       festivalToggle.checked = festivalEnabled;
     }
 
     setFestivalLabel(festivalEnabled);
-    applyModePreference(savedMode);
     applyFestivalPreference(festivalEnabled);
   };
 
@@ -188,14 +167,6 @@ document.addEventListener('DOMContentLoaded', () => {
   menu.addEventListener('click', (event) => {
     handleMobileToggle(event);
   });
-
-  if (modeToggle) {
-    modeToggle.addEventListener('change', (event) => {
-      const value = event.target.value;
-      localStorage.setItem('modePreference', value);
-      applyModePreference(value);
-    });
-  }
 
   if (festivalToggle) {
     festivalToggle.addEventListener('change', (event) => {
