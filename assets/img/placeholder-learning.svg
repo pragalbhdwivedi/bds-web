@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Learning spaces illustration">
+  <rect width="640" height="360" rx="28" fill="#f5f7fb"/>
+  <rect x="80" y="80" width="200" height="200" rx="16" fill="#1d4d8f" opacity="0.85"/>
+  <rect x="120" y="120" width="120" height="120" rx="10" fill="#ffffff" opacity="0.9"/>
+  <rect x="340" y="90" width="220" height="180" rx="16" fill="#f4b400" opacity="0.85"/>
+  <rect x="370" y="130" width="160" height="110" rx="10" fill="#ffffff" opacity="0.85"/>
+  <text x="320" y="310" text-anchor="middle" fill="#1f2933" font-family="Segoe UI, Arial" font-size="20">Learning &amp; Lab Spaces</text>
+</svg>
