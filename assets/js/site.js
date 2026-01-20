@@ -44,7 +44,18 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const applyFestivalPreference = (enabled) => {
-    document.documentElement.setAttribute('data-festival', enabled ? 'none' : 'none');
+    const rootElement = document.documentElement;
+    const festivalTheme = rootElement.dataset.festivalTheme || 'none';
+    const festivalLevel = rootElement.dataset.festivalLevel || 'subtle';
+
+    if (enabled) {
+      rootElement.setAttribute('data-festival', festivalTheme);
+      rootElement.setAttribute('data-festival-level', festivalLevel);
+      return;
+    }
+
+    rootElement.setAttribute('data-festival', 'none');
+    rootElement.setAttribute('data-festival-level', 'subtle');
   };
 
   const loadThemePreferences = () => {
