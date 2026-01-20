@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const mobileBreakpoint = 768;
   let lastScrollY = window.scrollY;
+  const modeToggle = document.getElementById('mode-toggle');
+  const festivalToggle = document.getElementById('festival-toggle');
+  const festivalSwitchText = document.querySelector('.control-switch-text');
 
   if (!toggle || !menu) {
     return;
@@ -35,6 +38,47 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const isMobile = () => window.innerWidth <= mobileBreakpoint;
+  const setFestivalLabel = (enabled) => {
+    if (festivalSwitchText) {
+      festivalSwitchText.textContent = enabled ? 'On' : 'Off';
+    }
+  };
+
+  const resolveAutoMode = () => {
+    const hour = new Date().getHours();
+    return hour >= 6 && hour < 18 ? 'day' : 'night';
+  };
+
+  const applyModePreference = (value) => {
+    if (value === 'day' || value === 'night') {
+      document.documentElement.setAttribute('data-mode', value);
+      return;
+    }
+    const autoMode = resolveAutoMode();
+    document.documentElement.setAttribute('data-mode', autoMode);
+  };
+
+  const applyFestivalPreference = (enabled) => {
+    document.documentElement.setAttribute('data-festival', enabled ? 'none' : 'none');
+  };
+
+  const loadThemePreferences = () => {
+    const savedMode = localStorage.getItem('modePreference') || 'auto';
+    const savedFestival = localStorage.getItem('festivalEnabled') || 'true';
+    const festivalEnabled = savedFestival !== 'false';
+
+    if (modeToggle) {
+      modeToggle.value = savedMode;
+    }
+
+    if (festivalToggle) {
+      festivalToggle.checked = festivalEnabled;
+    }
+
+    setFestivalLabel(festivalEnabled);
+    applyModePreference(savedMode);
+    applyFestivalPreference(festivalEnabled);
+  };
 
   const setActiveLink = () => {
     const currentPath = window.location.pathname.replace(/\/+$/, '') || '/';
@@ -145,6 +189,23 @@ document.addEventListener('DOMContentLoaded', () => {
     handleMobileToggle(event);
   });
 
+  if (modeToggle) {
+    modeToggle.addEventListener('change', (event) => {
+      const value = event.target.value;
+      localStorage.setItem('modePreference', value);
+      applyModePreference(value);
+    });
+  }
+
+  if (festivalToggle) {
+    festivalToggle.addEventListener('change', (event) => {
+      const enabled = event.target.checked;
+      localStorage.setItem('festivalEnabled', enabled ? 'true' : 'false');
+      setFestivalLabel(enabled);
+      applyFestivalPreference(enabled);
+    });
+  }
+
   window.addEventListener('pageshow', setReadyState);
 
   window.addEventListener('resize', () => {
@@ -165,6 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   enhanceDropdowns();
   setActiveLink();
+  loadThemePreferences();
   setReadyState();
 
   if (document.body.classList.contains('nav-open') && !isMobile()) {
