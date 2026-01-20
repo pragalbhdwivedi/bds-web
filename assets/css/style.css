@@ -50,6 +50,58 @@ header {
   width: 100%;
 }
 
+.top-bar {
+  background: #0f2e58;
+  color: #e5e7eb;
+  font-size: 13px;
+}
+
+.top-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 0;
+  gap: 12px;
+}
+
+.top-bar a {
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+.top-bar a:hover {
+  text-decoration: underline;
+}
+
+.top-bar-contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.top-bar-sep {
+  opacity: 0.6;
+}
+
+.top-bar-social {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.top-bar-social a {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  padding: 4px 10px;
+  min-height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+
 .navbar {
   display: flex;
   align-items: center;
@@ -491,6 +543,16 @@ body.loading #loading-bar {
 }
 
 @media (max-width: 768px) {
+  .top-bar-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .top-bar-social {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
   .navbar {
     flex-wrap: wrap;
   }
