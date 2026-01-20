@@ -1,0 +1,38 @@
+name: Update festival data
+
+on:
+  schedule:
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Generate festival data
+        env:
+          CAL_ICS_URL: ${{ secrets.CAL_ICS_URL }}
+        run: node scripts/update-festivals.mjs
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/themes/festivals.generated.json
+          git commit -m "chore: refresh festival dates"
+          git push
