@@ -1,0 +1,8 @@
+{
+  "name": "bds-web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "update-festivals": "node scripts/update-festivals.mjs"
+  }
+}
