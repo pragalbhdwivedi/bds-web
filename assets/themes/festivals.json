@@ -1,0 +1,326 @@
+{
+  "window": {
+    "daysBefore": 5,
+    "daysAfter": 2
+  },
+  "priorityOrder": [
+    "religious_major",
+    "religious_secondary",
+    "school",
+    "national"
+  ],
+  "events": [
+    {
+      "id": "diwali",
+      "name": "Diwali",
+      "category": "sanatan",
+      "importance": "religious_major",
+      "dateRule": {
+        "type": "calendar",
+        "calendarName": "hindu",
+        "calendarMatch": "diwali"
+      },
+      "themeId": "diwali"
+    },
+    {
+      "id": "holi",
+      "name": "Holi",
+      "category": "sanatan",
+      "importance": "religious_major",
+      "dateRule": {
+        "type": "calendar",
+        "calendarName": "hindu",
+        "calendarMatch": "holi"
+      },
+      "themeId": "holi"
+    },
+    {
+      "id": "navratri",
+      "name": "Navratri",
+      "category": "sanatan",
+      "importance": "religious_major",
+      "dateRule": {
+        "type": "calendar",
+        "calendarName": "hindu",
+        "calendarMatch": "navratri"
+      },
+      "themeId": "navratri"
+    },
+    {
+      "id": "dussehra",
+      "name": "Dussehra",
+      "category": "sanatan",
+      "importance": "religious_major",
+      "dateRule": {
+        "type": "calendar",
+        "calendarName": "hindu",
+        "calendarMatch": "dussehra"
+      },
+      "themeId": "dussehra"
+    },
+    {
+      "id": "janmashtami",
+      "name": "Janmashtami",
+      "category": "sanatan",
+      "importance": "religious_major",
+      "dateRule": {
+        "type": "calendar",
+        "calendarName": "hindu",
+        "calendarMatch": "janmashtami"
+      },
+      "themeId": "janmashtami"
+    },
+    {
+      "id": "ramnavami",
+      "name": "Ram Navami",
+      "category": "sanatan",
+      "importance": "religious_major",
+      "dateRule": {
+        "type": "calendar",
+        "calendarName": "hindu",
+        "calendarMatch": "ram navami"
+      },
+      "themeId": "ramnavami"
+    },
+    {
+      "id": "ganeshchaturthi",
+      "name": "Ganesh Chaturthi",
+      "category": "sanatan",
+      "importance": "religious_major",
+      "dateRule": {
+        "type": "calendar",
+        "calendarName": "hindu",
+        "calendarMatch": "ganesh chaturthi"
+      },
+      "themeId": "ganesh"
+    },
+    {
+      "id": "makarsankranti",
+      "name": "Makar Sankranti",
+      "category": "sanatan",
+      "importance": "religious_major",
+      "dateRule": {
+        "type": "calendar",
+        "calendarName": "hindu",
+        "calendarMatch": "makar sankranti"
+      },
+      "themeId": "sankranti"
+    },
+    {
+      "id": "rakshabandhan",
+      "name": "Raksha Bandhan",
+      "category": "sanatan",
+      "importance": "religious_major",
+      "dateRule": {
+        "type": "calendar",
+        "calendarName": "hindu",
+        "calendarMatch": "raksha bandhan"
+      },
+      "themeId": "rakhi"
+    },
+    {
+      "id": "mahashivratri",
+      "name": "Maha Shivratri",
+      "category": "sanatan",
+      "importance": "religious_major",
+      "dateRule": {
+        "type": "calendar",
+        "calendarName": "hindu",
+        "calendarMatch": "shivratri"
+      },
+      "themeId": "shivratri"
+    },
+    {
+      "id": "eidfitr",
+      "name": "Eid al-Fitr",
+      "category": "islamic",
+      "importance": "religious_major",
+      "dateRule": {
+        "type": "calendar",
+        "calendarName": "islamic",
+        "calendarMatch": "eid al-fitr"
+      },
+      "themeId": "eid"
+    },
+    {
+      "id": "eidadha",
+      "name": "Eid al-Adha",
+      "category": "islamic",
+      "importance": "religious_major",
+      "dateRule": {
+        "type": "calendar",
+        "calendarName": "islamic",
+        "calendarMatch": "eid al-adha"
+      },
+      "themeId": "adha"
+    },
+    {
+      "id": "muharram",
+      "name": "Muharram",
+      "category": "islamic",
+      "importance": "religious_secondary",
+      "dateRule": {
+        "type": "calendar",
+        "calendarName": "islamic",
+        "calendarMatch": "muharram"
+      },
+      "themeId": "eid"
+    },
+    {
+      "id": "eidemilad",
+      "name": "Eid-e-Milad",
+      "category": "islamic",
+      "importance": "religious_secondary",
+      "dateRule": {
+        "type": "calendar",
+        "calendarName": "islamic",
+        "calendarMatch": "milad"
+      },
+      "themeId": "eid"
+    },
+    {
+      "id": "jamatulvida",
+      "name": "Jamatul Vida",
+      "category": "islamic",
+      "importance": "religious_secondary",
+      "dateRule": {
+        "type": "calendar",
+        "calendarName": "islamic",
+        "calendarMatch": "jamatul vida"
+      },
+      "themeId": "eid"
+    },
+    {
+      "id": "hazratali",
+      "name": "Hazrat Ali Jayanti",
+      "category": "islamic",
+      "importance": "religious_secondary",
+      "dateRule": {
+        "type": "calendar",
+        "calendarName": "islamic",
+        "calendarMatch": "hazrat ali"
+      },
+      "themeId": "eid"
+    },
+    {
+      "id": "christmas",
+      "name": "Christmas",
+      "category": "christian",
+      "importance": "religious_major",
+      "dateRule": {
+        "type": "fixed",
+        "month": 12,
+        "day": 25
+      },
+      "themeId": "christmas"
+    },
+    {
+      "id": "easter",
+      "name": "Easter",
+      "category": "christian",
+      "importance": "religious_major",
+      "dateRule": {
+        "type": "calendar",
+        "calendarName": "christian",
+        "calendarMatch": "easter"
+      },
+      "themeId": "easter"
+    },
+    {
+      "id": "goodfriday",
+      "name": "Good Friday",
+      "category": "christian",
+      "importance": "religious_secondary",
+      "dateRule": {
+        "type": "calendar",
+        "calendarName": "christian",
+        "calendarMatch": "good friday"
+      },
+      "themeId": "easter"
+    },
+    {
+      "id": "christmaseve",
+      "name": "Christmas Eve",
+      "category": "christian",
+      "importance": "religious_secondary",
+      "dateRule": {
+        "type": "fixed",
+        "month": 12,
+        "day": 24
+      },
+      "themeId": "christmas"
+    },
+    {
+      "id": "eastermonday",
+      "name": "Easter Monday",
+      "category": "christian",
+      "importance": "religious_secondary",
+      "dateRule": {
+        "type": "calendar",
+        "calendarName": "christian",
+        "calendarMatch": "easter monday"
+      },
+      "themeId": "easter"
+    },
+    {
+      "id": "newyear",
+      "name": "New Year",
+      "category": "national",
+      "importance": "national",
+      "dateRule": {
+        "type": "fixed",
+        "month": 1,
+        "day": 1
+      },
+      "themeId": "national"
+    },
+    {
+      "id": "republicday",
+      "name": "Republic Day",
+      "category": "national",
+      "importance": "national",
+      "dateRule": {
+        "type": "fixed",
+        "month": 1,
+        "day": 26
+      },
+      "themeId": "national"
+    },
+    {
+      "id": "independenceday",
+      "name": "Independence Day",
+      "category": "national",
+      "importance": "national",
+      "dateRule": {
+        "type": "fixed",
+        "month": 8,
+        "day": 15
+      },
+      "themeId": "national"
+    },
+    {
+      "id": "gandhijayanti",
+      "name": "Gandhi Jayanti",
+      "category": "national",
+      "importance": "national",
+      "dateRule": {
+        "type": "fixed",
+        "month": 10,
+        "day": 2
+      },
+      "themeId": "national"
+    },
+    {
+      "id": "foundersday",
+      "name": "Founders Day",
+      "category": "school",
+      "importance": "school",
+      "dateRule": {
+        "type": "fixed",
+        "month": 11,
+        "day": 25
+      },
+      "themeId": "founders"
+    }
+  ]
+}
