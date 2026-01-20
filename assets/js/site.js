@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const menu = document.getElementById('primary-navigation');
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const mobileBreakpoint = 768;
+  let lastScrollY = window.scrollY;
 
   if (!toggle || !menu) {
     return;
@@ -144,6 +145,16 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!isMobile()) {
       closeMenu();
     }
+  });
+
+  window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+    if (currentScrollY > lastScrollY && currentScrollY > 10) {
+      document.body.classList.add('top-bar-hidden');
+    } else {
+      document.body.classList.remove('top-bar-hidden');
+    }
+    lastScrollY = currentScrollY;
   });
 
   enhanceDropdowns();
