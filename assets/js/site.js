@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const menu = document.getElementById('primary-navigation');
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const mobileBreakpoint = 768;
-  let lastScrollY = window.scrollY;
   const festivalToggle = document.getElementById('festival-toggle');
   const festivalSwitchText = document.querySelector('.control-switch-text');
 
@@ -56,6 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     rootElement.setAttribute('data-festival', 'none');
     rootElement.setAttribute('data-festival-level', 'subtle');
+    const badge = document.querySelector('.theme-badge');
+    if (badge) {
+      badge.remove();
+    }
   };
 
   const loadThemePreferences = () => {
@@ -194,16 +197,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!isMobile()) {
       closeMenu();
     }
-  });
-
-  window.addEventListener('scroll', () => {
-    const currentScrollY = window.scrollY;
-    if (currentScrollY > lastScrollY && currentScrollY > 10) {
-      document.body.classList.add('top-bar-hidden');
-    } else {
-      document.body.classList.remove('top-bar-hidden');
-    }
-    lastScrollY = currentScrollY;
   });
 
   enhanceDropdowns();

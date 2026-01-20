@@ -58,6 +58,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!event) {
       return;
     }
+    if (!event.themeId || event.themeId === 'none') {
+      return;
+    }
 
     const dismissedUntil = localStorage.getItem('badgeDismissedUntil');
     if (dismissedUntil === event.id) {

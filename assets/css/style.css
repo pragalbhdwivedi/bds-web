@@ -195,15 +195,23 @@ a:hover {
 }
 
 header {
+  background: transparent;
+  box-shadow: none;
+  position: static;
+}
+
+.site-header {
+  width: 100%;
+}
+
+.header-shell {
   background: var(--card);
   box-shadow: var(--shadow);
   position: sticky;
   top: 0;
   z-index: 10;
-}
-
-.site-header {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .top-bar {
@@ -265,10 +273,6 @@ header {
   font-size: 12px;
   color: var(--fg);
   transition: background 0.18s ease, transform 0.18s ease;
-}
-
-.top-bar-hidden .top-bar {
-  display: none;
 }
 
 .navbar {
@@ -809,6 +813,14 @@ body.loading #loading-bar {
 }
 
 @media (max-width: 768px) {
+  .top-bar {
+    display: none;
+  }
+
+  body.nav-open .top-bar {
+    display: block;
+  }
+
   .theme-controls {
     width: 100%;
     justify-content: flex-start;
@@ -872,6 +884,29 @@ body.loading #loading-bar {
 
   .menu > li > a {
     width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navbar {
+    align-items: flex-start;
+  }
+
+  nav {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+
+  .theme-controls {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 0;
   }
 }
 
