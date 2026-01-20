@@ -76,6 +76,11 @@ header {
   text-decoration: underline;
 }
 
+.top-bar a:focus-visible {
+  outline: 2px solid #1f2933;
+  outline-offset: 2px;
+}
+
 .top-bar-contact {
   display: flex;
   align-items: center;
@@ -94,7 +99,7 @@ header {
 }
 
 .top-bar-social a {
-  background: rgba(255, 255, 255, 0.6);
+  background: #ffffff;
   border-radius: 999px;
   padding: 4px 10px;
   min-height: 28px;
@@ -102,6 +107,7 @@ header {
   align-items: center;
   justify-content: center;
   font-size: 12px;
+  color: #1f2933;
   transition: background 0.18s ease, transform 0.18s ease;
 }
 
@@ -635,5 +641,9 @@ body.loading #loading-bar {
   main {
     opacity: 1;
     transform: none;
+  }
+
+  .top-bar-inner {
+    animation: none;
   }
 }
