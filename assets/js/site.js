@@ -84,9 +84,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const submenu = parentItem?.querySelector(':scope > .submenu');
 
     if (submenu) {
-      event.preventDefault();
-      const isOpen = parentItem.classList.toggle('submenu-open');
-      link.setAttribute('aria-expanded', String(isOpen));
+      const isOpen = parentItem.classList.contains('submenu-open');
+      if (!isOpen) {
+        event.preventDefault();
+        parentItem.classList.add('submenu-open');
+        link.setAttribute('aria-expanded', 'true');
+      } else {
+        link.setAttribute('aria-expanded', 'true');
+      }
     } else {
       closeMenu();
     }
@@ -105,7 +110,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const parentItem = link.closest('li');
     const hasSubmenu = parentItem?.querySelector(':scope > .submenu');
-    if (isMobile() && hasSubmenu) {
+    const isSubmenuOpen = parentItem?.classList.contains('submenu-open');
+    if (isMobile() && hasSubmenu && !isSubmenuOpen) {
       return;
     }
 
