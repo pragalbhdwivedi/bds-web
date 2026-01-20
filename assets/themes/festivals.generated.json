@@ -1,0 +1,14 @@
+{
+  "generatedAt": "placeholder",
+  "window": {
+    "daysBefore": 5,
+    "daysAfter": 2
+  },
+  "priorityOrder": [
+    "religious_major",
+    "religious_secondary",
+    "school",
+    "national"
+  ],
+  "resolvedEvents": []
+}
