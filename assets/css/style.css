@@ -448,14 +448,12 @@ footer a {
 }
 
 main {
-  opacity: 0;
-  transform: translateY(8px);
+  opacity: 1;
+  transform: none;
 }
 
 body.page-ready main {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  animation: pageFadeIn 0.3s ease;
 }
 
 body.page-exit main {
@@ -479,6 +477,17 @@ body.page-exit main {
 body.loading #loading-bar {
   width: 100%;
   opacity: 1;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 768px) {
