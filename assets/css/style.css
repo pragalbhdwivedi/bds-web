@@ -713,7 +713,7 @@ table th {
 }
 
 footer {
-  background: color-mix(in srgb, var(--card) 10%, #000);
+  background: color-mix(in srgb, var(--bg) 85%, var(--card));
   color: var(--fg);
   padding: 40px 0 24px;
 }
