@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="BDSPS logo">
+  <rect width="120" height="120" rx="24" fill="#1d4d8f"/>
+  <path d="M34 78h52v10H34z" fill="#f4b400"/>
+  <path d="M60 26l26 20v32H34V46l26-20z" fill="#fff" opacity="0.9"/>
+  <path d="M60 36l18 14v20H42V50l18-14z" fill="#1d4d8f"/>
+</svg>
