@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-03T04:24:24.500Z",
+  "generatedAt": "2026-04-04T04:10:19.884Z",
   "window": {
     "daysBefore": 5,
     "daysAfter": 2
@@ -26,14 +26,6 @@
       "themeId": "national",
       "startDate": "2026-01-26",
       "endDate": "2026-01-26"
-    },
-    {
-      "id": "goodfriday",
-      "name": "Good Friday",
-      "importance": "religious_secondary",
-      "themeId": "easter",
-      "startDate": "2026-04-03",
-      "endDate": "2026-04-03"
     },
     {
       "id": "easter",
@@ -178,6 +170,14 @@
       "themeId": "holi",
       "startDate": "2027-03-22",
       "endDate": "2027-03-22"
+    },
+    {
+      "id": "goodfriday",
+      "name": "Good Friday",
+      "importance": "religious_secondary",
+      "themeId": "easter",
+      "startDate": "2027-03-26",
+      "endDate": "2027-03-26"
     },
     {
       "id": "independenceday",
