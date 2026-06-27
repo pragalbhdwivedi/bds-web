@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-26T06:03:15.306Z",
+  "generatedAt": "2026-06-27T05:47:45.727Z",
   "window": {
     "daysBefore": 5,
     "daysAfter": 2
@@ -26,14 +26,6 @@
       "themeId": "national",
       "startDate": "2026-01-26",
       "endDate": "2026-01-26"
-    },
-    {
-      "id": "muharram",
-      "name": "Muharram",
-      "importance": "religious_secondary",
-      "themeId": "eid",
-      "startDate": "2026-06-26",
-      "endDate": "2026-06-26"
     },
     {
       "id": "independenceday",
@@ -178,6 +170,14 @@
       "themeId": "easter",
       "startDate": "2027-03-28",
       "endDate": "2027-03-28"
+    },
+    {
+      "id": "muharram",
+      "name": "Muharram",
+      "importance": "religious_secondary",
+      "themeId": "eid",
+      "startDate": "2027-06-16",
+      "endDate": "2027-06-16"
     },
     {
       "id": "independenceday",
