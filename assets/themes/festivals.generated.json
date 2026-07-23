@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-22T05:13:19.090Z",
+  "generatedAt": "2026-07-23T05:18:03.265Z",
   "window": {
     "daysBefore": 5,
     "daysAfter": 2
@@ -162,14 +162,6 @@
       "themeId": "easter",
       "startDate": "2027-03-26",
       "endDate": "2027-03-26"
-    },
-    {
-      "id": "easter",
-      "name": "Easter",
-      "importance": "religious_major",
-      "themeId": "easter",
-      "startDate": "2027-03-28",
-      "endDate": "2027-03-28"
     },
     {
       "id": "muharram",
