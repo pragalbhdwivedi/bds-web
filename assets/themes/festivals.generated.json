@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T02:57:18.576Z",
+  "generatedAt": "2026-08-27T12:12:25.863Z",
   "window": {
     "daysBefore": 5,
     "daysAfter": 2
@@ -34,14 +34,6 @@
       "themeId": "national",
       "startDate": "2026-08-15",
       "endDate": "2026-08-15"
-    },
-    {
-      "id": "eidemilad",
-      "name": "Eid-e-Milad",
-      "importance": "religious_secondary",
-      "themeId": "eid",
-      "startDate": "2026-08-26",
-      "endDate": "2026-08-26"
     },
     {
       "id": "rakshabandhan",
