@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T13:37:38.608Z",
+  "generatedAt": "2026-08-29T08:28:38.427Z",
   "window": {
     "daysBefore": 5,
     "daysAfter": 2
@@ -34,14 +34,6 @@
       "themeId": "national",
       "startDate": "2026-08-15",
       "endDate": "2026-08-15"
-    },
-    {
-      "id": "rakshabandhan",
-      "name": "Raksha Bandhan",
-      "importance": "religious_major",
-      "themeId": "rakhi",
-      "startDate": "2026-08-28",
-      "endDate": "2026-08-28"
     },
     {
       "id": "janmashtami",
@@ -170,6 +162,14 @@
       "themeId": "national",
       "startDate": "2027-08-15",
       "endDate": "2027-08-15"
+    },
+    {
+      "id": "rakshabandhan",
+      "name": "Raksha Bandhan",
+      "importance": "religious_major",
+      "themeId": "rakhi",
+      "startDate": "2027-08-17",
+      "endDate": "2027-08-17"
     },
     {
       "id": "gandhijayanti",
