@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T06:47:40.318Z",
+  "generatedAt": "2026-09-05T06:33:00.984Z",
   "window": {
     "daysBefore": 5,
     "daysAfter": 2
@@ -34,14 +34,6 @@
       "themeId": "national",
       "startDate": "2026-08-15",
       "endDate": "2026-08-15"
-    },
-    {
-      "id": "janmashtami",
-      "name": "Janmashtami",
-      "importance": "religious_major",
-      "themeId": "janmashtami",
-      "startDate": "2026-09-04",
-      "endDate": "2026-09-04"
     },
     {
       "id": "ganeshchaturthi",
@@ -170,6 +162,14 @@
       "themeId": "rakhi",
       "startDate": "2027-08-17",
       "endDate": "2027-08-17"
+    },
+    {
+      "id": "janmashtami",
+      "name": "Janmashtami",
+      "importance": "religious_major",
+      "themeId": "janmashtami",
+      "startDate": "2027-08-25",
+      "endDate": "2027-08-25"
     },
     {
       "id": "gandhijayanti",
