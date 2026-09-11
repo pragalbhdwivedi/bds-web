@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T06:52:28.855Z",
+  "generatedAt": "2026-09-11T06:52:01.951Z",
   "window": {
     "daysBefore": 5,
     "daysAfter": 2
@@ -112,8 +112,8 @@
       "name": "Makar Sankranti",
       "importance": "religious_major",
       "themeId": "sankranti",
-      "startDate": "2027-01-15",
-      "endDate": "2027-01-15"
+      "startDate": "2027-01-14",
+      "endDate": "2027-01-14"
     },
     {
       "id": "republicday",
@@ -146,6 +146,14 @@
       "themeId": "eid",
       "startDate": "2027-06-16",
       "endDate": "2027-06-16"
+    },
+    {
+      "id": "eidemilad",
+      "name": "Eid-e-Milad",
+      "importance": "religious_secondary",
+      "themeId": "eid",
+      "startDate": "2027-08-15",
+      "endDate": "2027-08-15"
     },
     {
       "id": "independenceday",
