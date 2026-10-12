@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T08:04:37.319Z",
+  "generatedAt": "2026-10-12T08:21:38.787Z",
   "window": {
     "daysBefore": 5,
     "daysAfter": 2
@@ -42,14 +42,6 @@
       "themeId": "national",
       "startDate": "2026-10-02",
       "endDate": "2026-10-02"
-    },
-    {
-      "id": "navratri",
-      "name": "Navratri",
-      "importance": "religious_major",
-      "themeId": "navratri",
-      "startDate": "2026-10-11",
-      "endDate": "2026-10-11"
     },
     {
       "id": "dussehra",
@@ -178,6 +170,14 @@
       "themeId": "ganesh",
       "startDate": "2027-09-04",
       "endDate": "2027-09-04"
+    },
+    {
+      "id": "navratri",
+      "name": "Navratri",
+      "importance": "religious_major",
+      "themeId": "navratri",
+      "startDate": "2027-09-30",
+      "endDate": "2027-09-30"
     },
     {
       "id": "gandhijayanti",
