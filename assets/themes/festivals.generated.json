@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T08:23:29.359Z",
+  "generatedAt": "2026-11-09T08:54:19.165Z",
   "window": {
     "daysBefore": 5,
     "daysAfter": 2
@@ -42,14 +42,6 @@
       "themeId": "national",
       "startDate": "2026-10-02",
       "endDate": "2026-10-02"
-    },
-    {
-      "id": "diwali",
-      "name": "Diwali",
-      "importance": "religious_major",
-      "themeId": "diwali",
-      "startDate": "2026-11-08",
-      "endDate": "2026-11-08"
     },
     {
       "id": "foundersday",
@@ -186,6 +178,14 @@
       "themeId": "dussehra",
       "startDate": "2027-10-09",
       "endDate": "2027-10-09"
+    },
+    {
+      "id": "diwali",
+      "name": "Diwali",
+      "importance": "religious_major",
+      "themeId": "diwali",
+      "startDate": "2027-10-29",
+      "endDate": "2027-10-29"
     },
     {
       "id": "foundersday",
